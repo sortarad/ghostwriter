@@ -1,0 +1,19 @@
+{
+    "name": "sortarad/ghostwriter",
+    "autoload": {
+        "psr-4": {
+            "Sortarad\\Ghostwriter\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Ghostwriter",
+            "description": "Ghostwriter addon"
+        },
+        "laravel": {
+            "providers": [
+                "Sortarad\\Ghostwriter\\ServiceProvider"
+            ]
+        }
+    }
+}
