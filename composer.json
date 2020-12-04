@@ -1,5 +1,9 @@
 {
     "name": "sortarad/ghostwriter",
+    "description": "Static text is boring, let's get it moving.",
+    "keywords": ["statamic"],
+    "homepage": "https://github.com/sortarad/ghostwriterr",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Sortarad\\Ghostwriter\\": "src"
