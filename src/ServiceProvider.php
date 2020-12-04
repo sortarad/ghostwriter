@@ -10,4 +10,8 @@ class ServiceProvider extends AddonServiceProvider
     protected $tags = [
         GhostwriterTags::class,
     ];
+
+    protected $publishables = [
+        __DIR__.'/../resources/dist' => '',
+    ];
 }
