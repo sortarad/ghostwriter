@@ -16,7 +16,7 @@ class GhostwriterTags extends Tags
     public function index()
     {
         $options = [
-            'typeSpeed' => $this->params->int('typeSpeed', 40),
+            'typeSpeed' => $this->params->int('speed', 40),
             'loop' => $this->params->bool('loop'),
         ];
         $json = json_encode( $options, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT );
