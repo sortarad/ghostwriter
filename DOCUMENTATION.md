@@ -5,13 +5,13 @@ Install via the Control Panel or via composer
 composer require sortarad/ghostwriter
 ```
 
-Then you must add this `{{ ghostwriter:assets }}` in your footer. This will load the necessary javascript files. 
+To load the necessary javascript files you'll need to add this `{{ ghostwriter:assets }}` in your footer.
 
 ## How to use?
-Getting your text moving is simple. Just place the `{{ ghostwriter }}` tag in the element you want to get moving.
+Getting your text moving is simple. Just place the `{{ ghostwriter loop="false" speed="40"}}` tag in the element you want to get moving.
 
-### What Options?
+### What options?
 There are two options that you can control. 
 
-- Speed: 
-- Looping: 
+- **Speed:** This is the typing speed in milliseconds. Example: `loop="false"`
+- **Looping:** Do you want the text to loop? Example: `speed="40"`
