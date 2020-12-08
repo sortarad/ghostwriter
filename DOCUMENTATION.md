@@ -10,10 +10,12 @@ To load the necessary javascript files you'll need to add this `{{ ghostwriter:a
 ## How to use?
 Getting your text moving is simple. Just place the `{{ ghostwriter loop="false" speed="40"}}` tag in the element you want to get moving. 
 
-Example:`<a {{ ghostwriter loop="true" speed="200"}} href="https://statamic.com">Powered by Statamic</a>`
+**Example:**`<a {{ ghostwriter loop="true" speed="200"}} href="https://statamic.com">Statamic Powered</a>`
 
 ### What options?
 There are two options that you can control. 
 
-- **Speed:** This is the typing speed (in milliseconds). Example: `speed="40"`
-- **Looping:** Do you want the text to loop? Example: `loop="false"`
+- **Speed:** This is the typing speed (in milliseconds). 
+Example: `speed="40"`
+- **Looping:** Do you want the text to loop?
+Example: `loop="false"`
