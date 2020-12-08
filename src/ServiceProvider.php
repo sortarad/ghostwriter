@@ -3,8 +3,10 @@
 namespace Sortarad\Ghostwriter;
 
 use Statamic\Statamic;
-use Sortarad\Ghostwriter\Tags\GhostwriterTags;
+use Statamic\Support\Str;
+use Statamic\Facades\Addon;
 use Statamic\Providers\AddonServiceProvider;
+use Sortarad\Ghostwriter\Tags\GhostwriterTags;
 
 class ServiceProvider extends AddonServiceProvider
 {
@@ -33,9 +35,13 @@ class ServiceProvider extends AddonServiceProvider
             return $this;
         }
 
-        Statamic::afterInstalled(function ($command) {
+        $addon = Addon::all()->first(function ($addon) {
+            return Str::startsWith(get_class($this), $addon->namespace());
+        });
+
+        Statamic::afterInstalled(function ($command) use ($addon) {
             $command->call('vendor:publish', [
-                '--tag' => $this->getAddon()->slug(),
+                '--tag' => $addon->slug(),
                 '--force' => true,
             ]);
         });
